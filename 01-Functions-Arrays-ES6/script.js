@@ -102,4 +102,94 @@
 
 // Day -2
 
+// part-1
 
+// let arr = [1,2,3,4,5,6];
+
+// function sumArr(arr) {
+//     let sum = 0;
+//     for(let i of arr) {
+//         sum += i;
+
+//     }
+//     return sum;
+// }
+// console.log(sumArr(arr))
+
+// let arr = [1,2,3,4,5,6];
+
+// function countEven(arr) {
+//     let count = 0;
+//     for(let i of arr) {
+//         if(i % 2 === 0) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(countEven(arr))
+
+// let arr = [1,2,3,4,5]
+
+// function maxNO(arr) {
+//     let max = 0;
+//     for(let i of arr) {
+//         if(i > max) {
+//             max = i;
+//         }
+//     }
+//     return max;
+// }
+// console.log(maxNO(arr))
+
+// part 2
+
+// let numbers = [2,5,8,10,13,20]
+
+// let square = numbers.map((val) => {
+//     return val * val
+// })
+// console.log(square)
+
+// let evenNo = numbers.filter((val) => {
+//     return val % 2 === 0;
+// })
+// console.log(evenNo)
+
+// let totalSum = numbers.reduce((acc,val) => {
+//     return acc + val
+// },0)
+// console.log(totalSum)
+
+// part 3
+
+// function processNumber(num,callback) {
+// console.log(callback(num))
+// }
+
+// function square(num) {
+// return num * num
+// }
+// function double(num) {
+// return num * 2
+// }
+// processNumber(4,square)
+// processNumber(8,double)
+
+let numbers = [10, 15, 20, 25];
+
+function checkNumbers(arr, callback) {
+  for (let item of arr) {
+    console.log(callback(item));
+  }
+}
+
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+function isPositive(num) {
+  return num > 0;
+}
+checkNumbers(numbers, isEven);
+checkNumbers(numbers, isPositive);
