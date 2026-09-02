@@ -176,20 +176,129 @@
 // processNumber(4,square)
 // processNumber(8,double)
 
-let numbers = [10, 15, 20, 25];
+// let numbers = [10, 15, 20, 25];
 
-function checkNumbers(arr, callback) {
-  for (let item of arr) {
-    console.log(callback(item));
-  }
-}
+// function checkNumbers(arr, callback) {
+//   for (let item of arr) {
+//     console.log(callback(item));
+//   }
+// }
 
-function isEven(num) {
-  return num % 2 === 0;
-}
+// function isEven(num) {
+//   return num % 2 === 0;
+// }
 
-function isPositive(num) {
-  return num > 0;
-}
-checkNumbers(numbers, isEven);
-checkNumbers(numbers, isPositive);
+// function isPositive(num) {
+//   return num > 0;
+// }
+// checkNumbers(numbers, isEven);
+// checkNumbers(numbers, isPositive);
+
+// Day -3 26/08
+
+// part -1
+
+// let sum = (a,b) => {
+//   return a + b
+// }
+// console.log(sum(5,6))
+
+// let mul = (a,b) => a*b;
+
+// console.log(mul(5,5))
+
+// let name = "Hukesh";
+// let age = 23;
+
+// console.log(`Hello my name is ${name}.I am ${age} years old.`)
+
+// let arr = [1,2,3,4,5,6];
+
+// let [a,b] = arr;
+
+// console.log(a,b)
+
+// let profile = {
+//   name: "Hukesh",
+//   age: 23
+// }
+
+// let {name,age} = profile;
+// console.log(age,name)
+
+// let arr = [1,2,3,4,5,6];
+
+// let copy = [...arr]
+
+// console.log(copy)
+
+// let arr = [1,2,3,4,5,6];
+
+// let [a,b,...c] = arr;
+
+// console.log(a,b,c)
+
+// function greet(name = "guest") {
+//    console.log(`Hello welcome ${name}.`)
+// }
+// greet("Hukesh")
+
+// part -2
+
+// let mul = (a,b) => a * b;
+
+// console.log(mul(5,5))
+
+// let colors = ["Red","Green","Blue","Yellow"];
+
+// let [first,second,...rest] = colors;
+
+// console.log(first,second,rest)
+
+// let user = {
+//   name: "Hukesh",
+//   age:23,
+//   city:"Nagpur"
+// }
+// let {name,age,city} = user;
+
+// console.log(`Hello my name is ${name}.I am ${age} years old.I live in ${city}.`)
+
+// part-3
+
+// function greet(name = "Guest") {
+//   return `Welcome ${name}.`
+// }
+// console.log(greet())
+// console.log(greet("Hukesh"))
+
+// let numbers = [10,20,30];
+
+// let copy = [...numbers,40]
+// console.log(numbers)
+// console.log(copy)
+
+// // self for understanding ke
+
+// numbers.push(40,33)
+// console.log(numbers)
+
+// part 4
+
+// let student = {
+//   name: "Lucky",
+//   age: 23,
+//   skills: ["HTML","CSS","JS"]
+// };
+
+// let showStudent = (student) => {
+//   let {name,age,skills} = student;
+//   let [first,...rest] = skills;
+
+//   return `  Name: ${name}
+//   Age: ${age}
+//   First Skill: ${first}
+//   Other Skills: ${rest}`
+
+// }
+// console.log(showStudent(student))
