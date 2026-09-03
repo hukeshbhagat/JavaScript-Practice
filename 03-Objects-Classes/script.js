@@ -47,7 +47,6 @@
 
 // part-3
 
-
 // class Person {
 //     constructor(name,age) {
 //         this.name = name;
@@ -64,25 +63,73 @@
 
 // part-4
 
-class Person {
-    constructor(name,age) {
-        this.name = name;
-        this.age = age;
-    }
+// class Person {
+//     constructor(name,age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+
+// class Developer extends Person{
+//     constructor(name,age,language) {
+//         super(name,age)
+//         this.language = language;
+//     }
+//     showInfo() {
+//         console.log(`Hello my name is ${this.name} and I am ${this.age} years old.My Programming language is ${this.language}.`)
+//     }
+// }
+
+// let p1 = new Developer("Hukesh",23,"Bsc-it");
+// p1.showInfo()
+// let p2 = new Developer("Dev",23,"c++");
+// p2.showInfo()
+
+// Day 1 3/09
+
+// let car = {
+//     brand: "Tata",
+//     model: "Punch",
+//     price: 800000,
+
+//     showInfo() {
+//         return `Car name is ${this.brand}, model is ${this.model} and price is ${this.price}.`
+
+//     }
+// };
+// console.log(car.showInfo())
+
+// part 2
+
+class BankAccount {
+  constructor(owner, balance) {
+    this.owner = owner;
+    this.balance = balance;
+  }
+  deposit(amount) {
+    this.balance += amount;
+  }
+  showBalance() {
+    console.log(this.balance);
+  }
 }
 
-class Developer extends Person{
-    constructor(name,age,language) {
-        super(name,age)
-        this.language = language; 
-    }
-    showInfo() {
-        console.log(`Hello my name is ${this.name} and I am ${this.age} years old.My Programming language is ${this.language}.`)
-    }
+class SavingsAccount extends BankAccount {
+  constructor(owner, balance, interestRate) {
+    super(owner, balance);
+    this.interestRate = interestRate;
+  }
+  addInterest() {
+    let interest = (this.balance * this.interestRate) / 100;
+
+    this.balance += interest;
+  }
 }
 
+let s1 = new SavingsAccount("Hukesh", 5000, 5);
+s1.showBalance();
+// s1.deposit(1000)
+// s1.showBalance()
 
-let p1 = new Developer("Hukesh",23,"Bsc-it");
-p1.showInfo()
-let p2 = new Developer("Dev",23,"c++");
-p2.showInfo()
+s1.addInterest();
+s1.showBalance();
