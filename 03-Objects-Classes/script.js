@@ -101,35 +101,109 @@
 
 // part 2
 
-class BankAccount {
-  constructor(owner, balance) {
-    this.owner = owner;
-    this.balance = balance;
+// class BankAccount {
+//   constructor(owner, balance) {
+//     this.owner = owner;
+//     this.balance = balance;
+//   }
+//   deposit(amount) {
+//     this.balance += amount;
+//   }
+//   showBalance() {
+//     console.log(this.balance);
+//   }
+// }
+
+// class SavingsAccount extends BankAccount {
+//   constructor(owner, balance, interestRate) {
+//     super(owner, balance);
+//     this.interestRate = interestRate;
+//   }
+//   addInterest() {
+//     let interest = (this.balance * this.interestRate) / 100;
+
+//     this.balance += interest;
+//   }
+// }
+
+// let s1 = new SavingsAccount("Hukesh", 5000, 5);
+// s1.showBalance();
+// // s1.deposit(1000)
+// // s1.showBalance()
+
+// s1.addInterest();
+// s1.showBalance();
+
+// 23/09
+
+// part 1
+
+// function studentMarks() {
+//   let marks = 10;
+//   let promise = new Promise((resolve,reject) => {
+//   if(marks >= 40) {
+//     resolve("Pass")
+//   }else {
+//     reject("Fail")
+//   }
+// })
+
+// return promise
+// }
+// studentMarks()
+// .then((result) => {
+//   console.log(result)
+// })
+// .catch((error) => {
+//   console.log(error)
+// })
+
+// async function studentMarks() {
+//   let marks = 30;
+//   let promise = new Promise((resolve,reject) => {
+//   if(marks >= 40) {
+//     resolve("Pass")
+//   }else {
+//     reject("Fail")
+//   }
+// })
+
+// try {
+//   let result = await promise
+//   console.log(result)
+// }
+// catch(error) {
+//   console.log(error)
+// }
+
+// }
+// studentMarks()
+
+student = {
+  name: "Hukesh",
+  city: "Nagpur",
+  marks: [70, 80, 90],
+};
+
+function studentmarks() {
+  let { name, city, marks } = student;
+
+  let totalMarks = marks.reduce((acc, val) => {
+    return acc + val;
+  }, 0);
+
+  let average = totalMarks / marks.length;
+
+  let progress;
+  if (average >= 40) {
+    progress = "Pass";
+  } else {
+    progress = "Fail";
   }
-  deposit(amount) {
-    this.balance += amount;
-  }
-  showBalance() {
-    console.log(this.balance);
-  }
+
+  return `Name = ${name}
+  Total Marks = ${totalMarks}
+  Average = ${average}
+  Progress = ${progress}`;
 }
-
-class SavingsAccount extends BankAccount {
-  constructor(owner, balance, interestRate) {
-    super(owner, balance);
-    this.interestRate = interestRate;
-  }
-  addInterest() {
-    let interest = (this.balance * this.interestRate) / 100;
-
-    this.balance += interest;
-  }
-}
-
-let s1 = new SavingsAccount("Hukesh", 5000, 5);
-s1.showBalance();
-// s1.deposit(1000)
-// s1.showBalance()
-
-s1.addInterest();
-s1.showBalance();
+console.log(studentmarks());
