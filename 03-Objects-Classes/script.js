@@ -179,31 +179,88 @@
 // }
 // studentMarks()
 
-student = {
-  name: "Hukesh",
-  city: "Nagpur",
-  marks: [70, 80, 90],
-};
+// student = {
+//   name: "Hukesh",
+//   city: "Nagpur",
+//   marks: [70, 80, 90],
+// };
 
-function studentmarks() {
-  let { name, city, marks } = student;
+// function studentmarks() {
+//   let { name, city, marks } = student;
 
-  let totalMarks = marks.reduce((acc, val) => {
-    return acc + val;
-  }, 0);
+//   let totalMarks = marks.reduce((acc, val) => {
+//     return acc + val;
+//   }, 0);
 
-  let average = totalMarks / marks.length;
+//   let average = totalMarks / marks.length;
 
-  let progress;
-  if (average >= 40) {
-    progress = "Pass";
-  } else {
-    progress = "Fail";
+//   let progress;
+//   if (average >= 40) {
+//     progress = "Pass";
+//   } else {
+//     progress = "Fail";
+//   }
+
+//   return `Name = ${name}
+//   Total Marks = ${totalMarks}
+//   Average = ${average}
+//   Progress = ${progress}`;
+// }
+// console.log(studentmarks());
+
+
+
+// part 4 
+
+// let user = {
+//   name: "Hukesh",
+//   age: 23,
+//   city: "Nagpur"
+// }
+
+// let {name,city} = user
+
+// let copy = {
+//   ...user,
+//   gender: "male"
+// }
+
+// console.log(user)
+// console.log(copy)
+
+
+
+// part 5 
+
+let products = [
+  {name:"Phone", price: 15000},
+  {name:"Laptop",price:50000},
+  {name:"Mouse",price:800}
+];
+
+function getExpensiveProducts(products) {
+  
+  // let {price} = products
+
+  let greaterPrice = products.filter((val) => {
+    return val.price > 10000
+  })
+  console.log(greaterPrice)
+  
+
+  let total = greaterPrice.reduce((acc,val) => {
+    return acc + val.price
+
+  },0)
+  console.log(total)
+
+  return {
+   products: greaterPrice,
+    total: total
   }
+  
 
-  return `Name = ${name}
-  Total Marks = ${totalMarks}
-  Average = ${average}
-  Progress = ${progress}`;
+
 }
-console.log(studentmarks());
+getExpensiveProducts(products)
+
