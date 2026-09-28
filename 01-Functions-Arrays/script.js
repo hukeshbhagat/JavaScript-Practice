@@ -302,3 +302,111 @@
 
 // }
 // console.log(showStudent(student))
+
+// Day 4
+
+// part 1.
+
+// let arr = [1,2,3,4,5,6]
+
+// function maxNo(arr) {
+//     let max = arr[0];
+//     for(let i of arr) {
+//         if(i > max) {
+//             max = i
+//         }
+//     }
+//     return max;
+// }
+// console.log(maxNo(arr))
+
+// 2.
+// let arr = [1,2,3,4,5,6]
+
+// function minNo(arr) {
+//     let min = arr[0];
+//     for(let i of arr) {
+//         if(i < min) {
+//             min = i
+//         }
+//     }
+//     return min;
+// }
+// console.log(minNo(arr))
+
+// 3.
+// let arr = [1,2,3,4,5,6];
+
+// function countEven(arr) {
+//     let even = 0
+//     for(let i of arr) {
+//         if(i % 2 === 0) {
+//             even++
+//         }
+//     }
+//     return even;
+
+// }
+// console.log(countEven(arr))
+
+// extra
+// let arr = [1,2,3,4,5,6];
+
+// function countEven(arr) {
+//     let even = 0
+//     for(let i of arr) {
+//         if(i % 2 === 0) {
+//             console.log(i)
+//         }
+//     }
+//     return even;
+
+// }
+// countEven(arr)
+
+// 4.
+
+// let arr = [1,2,3,4,5,6]
+
+// function sumArr(arr) {
+//     let sum = 0;
+//     for(let i of arr) {
+//         sum += i
+//     }
+//     return sum
+// }
+// console.log(sumArr(arr))
+
+// 5.
+
+// function processNumber(num,callback) {
+// return callback(num)
+    
+// }
+
+// function square(num) {
+//     return num * num
+
+// }
+// console.log(processNumber(6,square))
+
+// 6.
+
+let arr = [2,3,4];
+
+function processArray(arr,callback) {
+    let square = [];
+    for(let i of arr) {
+       square.push(callback(i))
+    }
+
+    return square
+    
+}
+
+function squareNo(i) {
+    return i * i
+}
+console.log(processArray(arr,squareNo))
+
+
