@@ -110,7 +110,6 @@
 
 // })
 
-
 // part 2
 
 //   let marks = 40;
@@ -123,7 +122,6 @@
 // })
 
 // async function stuCard() {
-  
 
 //   try {
 //     let result = await promsie
@@ -133,61 +131,94 @@
 //     console.log(error)
 
 //   }
-  
+
 // }
 // stuCard()
 
 // part 3
 
+// let input = document.querySelector("#inp");
+// let button = document.querySelector("#btn")
+// let order = document.querySelector("#list")
+
+// let counter = document.querySelector("#counts")
+
+// let count = 0;
+
+// button.addEventListener("click",function() {
+//   if(input.value.trim() === "") {
+//     return
+
+//   }
+
+//   let li = document.createElement("li")
+
+//   li.innerText = input.value
+
+//   let delBtn = document.createElement("button")
+
+//   delBtn.innerText = "Delete"
+
+//   let completeBtn = document.createElement("button")
+
+//   completeBtn.innerText = "Complete"
+
+//   li.append(completeBtn)
+//   li.append(delBtn)
+//   order.append(li)
+
+//   count++;
+//   counter.innerText = "Total task count = " + count
+
+//   completeBtn.addEventListener("click",function() {
+//     li.classList.toggle("completed")
+//   })
+
+//   delBtn.addEventListener("click",function() {
+//     li.remove()
+
+//     count--;
+//   counter.innerText = "Total task count = " + count
+
+//   })
+
+//   input.value = ""
+//   input.focus()
+// })
+
+// part 4
 
 let input = document.querySelector("#inp");
-let button = document.querySelector("#btn")
-let order = document.querySelector("#list")
-
-let counter = document.querySelector("#counts")
-
+let button = document.querySelector("#btn");
+let studentList = document.querySelector("#order");
+let counts = document.querySelector("#counter");
 let count = 0;
 
-button.addEventListener("click",function() {
-  if(input.value.trim() === "") {
-    return
-
+button.addEventListener("click", function () {
+  if (input.value.trim() === "") {
+    return;
   }
+  let list = document.createElement("li");
 
-  let li = document.createElement("li")
+  list.innerText = input.value;
 
-  li.innerText = input.value
+  let delBtn = document.createElement("button");
 
-  let delBtn = document.createElement("button")
+  delBtn.innerText = "Delete";
 
-  delBtn.innerText = "Delete"
-
-  let completeBtn = document.createElement("button")
-
-  completeBtn.innerText = "Complete"
-
-
-  li.append(completeBtn)
-  li.append(delBtn)
-  order.append(li)
+  list.append(delBtn);
+  studentList.append(list);
 
   count++;
-  counter.innerText = "Total task count = " + count
+  counts.innerText = "Total Student: " + count;
 
-  completeBtn.addEventListener("click",function() {
-    li.classList.toggle("completed")
-  })
-
-  delBtn.addEventListener("click",function() {
-    li.remove()
+  delBtn.addEventListener("click", function () {
+    list.remove();
 
     count--;
-  counter.innerText = "Total task count = " + count
+    counts.innerText = "Total Student:  " + count;
+  });
 
-
-  })
-  
-  input.value = ""
-  input.focus()
-})
-
+  input.value = "";
+  input.focus();
+});
