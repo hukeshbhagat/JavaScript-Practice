@@ -115,7 +115,7 @@
 
 // part 2
 
-let arr = [12,5,20,8,15,3]
+// let arr = [12,5,20,8,15,3]
 
 // function findMax(arr) {
 //     let max = arr[0];
@@ -169,26 +169,85 @@ let arr = [12,5,20,8,15,3]
 
 // part 4
 
-let student = {
-    name : "Hukseh",
-    marks : [2,3,5],
-    city : "Nagpur"
-}
+// let student = {
+//     name : "Hukseh",
+//     marks : [2,3,5],
+//     city : "Nagpur"
+// }
 
-function showResult(student) {
-    let {name,marks,city} = student
+// function showResult(student) {
+//     let {name,marks,city} = student
 
-    let mark = 0;
+//     let mark = 0;
 
-    for(let i of marks) {
-        mark += i
-    }
+//     for(let i of marks) {
+//         mark += i
+//     }
     
 
     
 
 
-}
+// }
+
+
+
+// day 1 5/10/26
+
+
+
+// function evenOdd(num) {
+//         if(num % 2 === 0) {
+//             return "Even"
+//         }else {
+//             return "Odd"
+//         }
+//     }
+// console.log(evenOdd(3))
+
+
+// let arr = [1,2,3,4]
+
+// function sumarr(arr) {
+//     let sum = 0
+//     for(let i of arr) {
+//         sum += i
+
+//     }
+//     return sum
+// }
+// console.log(sumarr(arr))
+
+// let arr = [1,2,3,4,5,6]
+
+// function maxNo(arr) {
+//     let max = arr[0]
+//     for(let i of arr) {
+//         if(i > max) {
+//              max = i ;
+        
+//             }
+//     }
+//     return max
+// }
+// console.log(maxNo(arr))
+
+// let arr = [1,2,3,4,5,6]
+
+// function countEven(arr) {
+//     let count = 0;
+
+//     for(let i of arr) {
+//         if(i % 2 === 0) {
+//             count++
+//         }
+//     }
+//     return count
+// }
+
+// console.log(countEven(arr))
+
+
 
 
 
