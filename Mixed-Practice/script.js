@@ -77,10 +77,9 @@
 // }
 // console.log(showResult(student))
 
+// Day 2
 
-// Day 2 
-
-// part 1 
+// part 1
 
 // function profile(username,password) {
 //     return new Promise((resolve,reject) => {
@@ -92,26 +91,21 @@
 // })
 // }
 
-
-
-
 // async function login(username,password) {
-    
-//         try{ 
+
+//         try{
 //             let result = await profile(username,password)
 //             console.log(result)
 //             console.log("Dashboard Loaded")
 //             console.log("Welcome User")
-//         } 
+//         }
 //         catch(error) {
 //             console.log(error)
 
 //         }
 
-
 //     }
 //    login("Hukesh",1234)
-
 
 // part 2
 
@@ -141,8 +135,6 @@
 // }
 // console.log(findMin(arr))
 
-
-
 // function evenNo(arr) {
 //     let count = 0;
 //     for(let i of arr) {
@@ -154,7 +146,6 @@
 // }
 // console.log(evenNo(arr))
 
-
 // function getTotal(arr) {
 //     let sum = 0
 //     for(let i of arr) {
@@ -163,7 +154,6 @@
 //     return sum
 // }
 // console.log(getTotal(arr))
-
 
 // part 3
 
@@ -183,18 +173,10 @@
 //     for(let i of marks) {
 //         mark += i
 //     }
-    
-
-    
-
 
 // }
 
-
-
 // day 1 5/10/26
-
-
 
 // function evenOdd(num) {
 //         if(num % 2 === 0) {
@@ -204,7 +186,6 @@
 //         }
 //     }
 // console.log(evenOdd(3))
-
 
 // let arr = [1,2,3,4]
 
@@ -225,7 +206,7 @@
 //     for(let i of arr) {
 //         if(i > max) {
 //              max = i ;
-        
+
 //             }
 //     }
 //     return max
@@ -247,12 +228,72 @@
 
 // console.log(countEven(arr))
 
+// day 2 6/11
+
+let arr = [2, 5, 8, 3, 10, 7];
+
+// let evenNo = arr.filter((val) => {
+//   return val % 2 === 0;
+// });
+// console.log(evenNo);
+
+// let doubleNo = arr.map((val) => {
+//     return val * 2
+// })
+// console.log(doubleNo)
+
+// let totalSum = arr.reduce((acc,val) => {
+//     return acc + val
+// },0)
+
+// console.log(totalSum)
+
+// let number = arr.filter((val) => {
+//     return val > 5
+// })
+// console.log(number)
+
+
+// 2.
+
+// let student = {
+//     name: "Lucky",
+//     age: 24,
+//     city: "Nagpur",
+//     marks:[70,80,90]
+// };
+
+// console.log(student.name,student.city)
+
+// let {name,city} = student;
+// console.log(name,city)
+
+
+// let {marks} = student
+
+// let total = marks.reduce((acc,val) => {
+//     return acc + val
+// },0)
+
+// console.log(total)
+
+// console.log(`${name} from ${city} scored ${total} marks.`)
 
 
 
+// 3.
 
+let a = [10,20,30]
+let b = [40,50,60]
 
+let copy = [...a,...b]
+console.log(copy)
 
-
-        
+function sumAll(...numbers) {
     
+}
+
+
+
+
+
