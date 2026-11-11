@@ -230,7 +230,7 @@
 
 // day 2 6/11
 
-let arr = [2, 5, 8, 3, 10, 7];
+// let arr = [2, 5, 8, 3, 10, 7];
 
 // let evenNo = arr.filter((val) => {
 //   return val % 2 === 0;
@@ -254,7 +254,7 @@ let arr = [2, 5, 8, 3, 10, 7];
 // console.log(number)
 
 
-// 2.
+// // 2.
 
 // let student = {
 //     name: "Lucky",
@@ -281,17 +281,61 @@ let arr = [2, 5, 8, 3, 10, 7];
 
 
 
-// 3.
+// // 3.
 
-let a = [10,20,30]
-let b = [40,50,60]
+// let a = [10,20,30]
+// let b = [40,50,60]
 
-let copy = [...a,...b]
-console.log(copy)
+// let copy = [...a,...b]
+// console.log(copy)
 
-function sumAll(...numbers) {
+// function sumAll(...numbers) {
+//     let sum = numbers.reduce((acc,val) => {
+//         return acc + val
+//     },0)
+//     return sum
+// }
+// console.log(sumAll(10,20,30,40))
+
+
+// // function studentResult(student) {
+
+// //     let {name} = student
+
+// //     let {marks} = student
+
+// //     let total = marks.reduce((acc,val) => {
+// //         return acc + val
+// //     },0)
+
+// //     let average = total / marks.length
+
+// //     return `${name} scored average ${average} marks.`
+
+// // }
+// // console.log(studentResult(student))
+
+
+// day 3 11/11
+
+// let heading = document.querySelector("#head")
+
+// let button = document.querySelector("#btn") 
+
+// let bgButton = document.querySelector("#bgbtn")
+
+// button.addEventListener("click",function() {
+//     heading.innerText = "Hello Lucky"
     
-}
+    
+// })
+
+// bgButton.addEventListener("click",function() {
+//         document.body.classList.toggle("mode")
+//     })
+
+
+
 
 
 
