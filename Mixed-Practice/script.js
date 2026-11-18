@@ -335,6 +335,87 @@
 //     })
 
 
+// 3.
+
+// let increaseBtn = document.querySelector("#inc")
+// let decreaseBtn = document.querySelector("#decre")
+// let resetBtn = document.querySelector("#res")
+
+// let counters = document.querySelector("#counterBtn")
+
+// let count = 0
+
+// increaseBtn.addEventListener("click",function() {
+
+//     count++
+//     counters.innerText = "Count = " + count
+
+// })
+
+// decreaseBtn.addEventListener("click",function() {
+
+    
+//     if(count > 0) {
+//         count--;
+//         counters.innerText = "Count = " + count
+//     }
+    
+
+// })
+
+// resetBtn.addEventListener("click",function() {
+
+    
+//     count = 0
+//     counters.innerText = "Count = " + count
+// })
+
+// 4.
+
+let input = document.querySelector("#inp")
+let button = document.querySelector("#btn")
+let order = document.querySelector("#orders")
+let counter = document.querySelector("#counters")
+
+let count = 0
+
+counter.innerText = "Total tasks = " + count
+
+button.addEventListener("click",function() {
+    if(input.value.trim() === "") {
+        return
+    }
+    let li = document.createElement("li")
+
+    li.innerText = input.value
+
+   let delBtn = document.createElement("button")
+
+   delBtn.innerText = "Delete"
+
+   count++;
+   counter.innerText = "Total tasks = " + count
+
+   delBtn.addEventListener("click",function() {
+
+    li.remove()
+
+    count--;
+   counter.innerText = "Total tasks = " + count
+
+   })
+
+    
+    li.append(delBtn)
+    order.append(li)
+    input.value = ""
+    input.focus()
+
+})
+
+
+
+
 
 
 
